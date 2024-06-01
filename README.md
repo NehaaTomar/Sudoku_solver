@@ -1,6 +1,7 @@
 # Hey! I am Neha Tomar
-# A Very Fast Sudoku Solver made in C++
-# Introduction
+
+# Introduction 
+A Very Fast Sudoku Solver made in C++
 This Sudoku solver is designed to solve Sudoku puzzles of any difficulty level. Sudoku is a popular logic-based number placement puzzle game. The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid (also called "boxes", "blocks", or "regions") contain all of the digits from 1 to 9 without repetition.
 
 # Features
@@ -10,10 +11,13 @@ Provides clear and easy-to-understand output.
 
 # How to Use?
 1. Clone this repository to your local machine.
+   ''' git clone https://github.com/yourusername/sudoku-solver.git '''
 2. Ensure you have a C++ compiler installed (e.g., g++).
 3. Open a terminal or command prompt and navigate to the directory where you cloned the repository.
-4. Compile the sudoku_solver.cpp file using the C++ compiler: g++ -o sudoku_solver sudoku_solver.cpp.
-5. Run the compiled program: ./sudoku_solver.
+4. Compile the sudoku_solver.cpp file using the C++ compiler
+   ''' g++ -o sudoku_solver sudoku_solver.cpp '''
+5. Run the compiled program
+   ''' ./Sudoku_solver '''
 6. Input the Sudoku puzzle as a 9x9 grid, using '0' or '.' to represent empty cells.
 7. The program will solve the puzzle and display the solution.
 
@@ -34,17 +38,6 @@ Provides clear and easy-to-understand output.
 - The data structure used to implement Algo X is Dancing Links also proposed by Donald Knuth.
 - I made a significant improvement in performance building the Toroidal Doubly Linked List to represent the puzzle as an exact cover problem. Time Complexity: O(n^3)
 - And then the standard backtracking algorithm as described by Algorithm X.
-
-# Tested on a Core i3 7th Gen @ 2.4 Ghz
-- 9 X 9 sudoku: 2.029 ms
-- 16 X 16: 4.986 ms
-- 25 X 25: 15.957 ms
-
-
-# Project Title
-
-A brief description of what this project does and who it's for
-
 
 ## Usage/Examples
 
