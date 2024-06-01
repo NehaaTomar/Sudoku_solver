@@ -25,4 +25,3 @@
 - 16 X 16: 4.986 ms
 - 25 X 25: 15.957 ms
 
-# Will be adding a GUI soon
