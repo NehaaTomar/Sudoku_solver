@@ -11,21 +11,12 @@ Provides clear and easy-to-understand output.
 
 # How to Use?
 1. Clone this repository to your local machine.
-   ''' bash
-    git clone: https://github.com/NehaaTomar/Sudk_solver.git
-   '''
-3. Ensure you have a C++ compiler installed (e.g., g++).
-4. Open a terminal or command prompt and navigate to the directory where you cloned the repository.
-5. Compile the sudoku_solver.cpp file using the C++ compiler
-   ''' bash
-   g++ -o sudoku_solver sudoku_solver.cpp
-   '''
-7. Run the compiled program
-   ''' bash
-   ./Sudoku_solver
-   '''
-9. Input the Sudoku puzzle as a 9x9 grid, using '0' or '.' to represent empty cells.
-10. The program will solve the puzzle and display the solution.
+2. Ensure you have a C++ compiler installed (e.g., g++).
+3. Open a terminal or command prompt and navigate to the directory where you cloned the repository.
+4. Compile the sudoku_solver.cpp file using the C++ compiler
+5. Run the compiled program
+6. Input the Sudoku puzzle as a 9x9 grid, using '0' or '.' to represent empty cells.
+7. The program will solve the puzzle and display the solution.
 
 # How to Run ?
 - # Compiling
