@@ -40,8 +40,16 @@ Provides clear and easy-to-understand output.
 - 16 X 16: 4.986 ms
 - 25 X 25: 15.957 ms
 
-# Example
-- # Here's an example of how to input a Sudoku puzzle:
+
+# Project Title
+
+A brief description of what this project does and who it's for
+
+
+## Usage/Examples
+
+```
+Here's an example of how to input a Sudoku puzzle:
 Enter the Sudoku puzzle (use '0' or '.' for empty cells):
 5 3 0 | 0 7 0 | 0 0 0
 6 0 0 | 1 9 5 | 0 0 0
@@ -69,4 +77,9 @@ Sudoku puzzle solved:
 9 6 1 | 5 3 7 | 2 8 4
 2 8 7 | 4 1 9 | 6 3 5
 3 4 5 | 2 8 6 | 1 7 9
+
+
+```
+
+
 
