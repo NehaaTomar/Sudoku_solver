@@ -1,75 +1,246 @@
-# Hey! I am Neha Tomar
+# 🧠 AI Sudoku Solver & Generator Web App
 
-# Introduction 
-A Very Fast Sudoku Solver made in C++
-This Sudoku solver is designed to solve Sudoku puzzles of any difficulty level. Sudoku is a popular logic-based number placement puzzle game. The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid (also called "boxes", "blocks", or "regions") contain all of the digits from 1 to 9 without repetition.
+This is a full-stack AI-powered Sudoku web application built with **Flask** for the backend and **HTML/CSS/JS** for the frontend.
 
-# Features
-Solves Sudoku puzzles of any difficulty level.
-Uses backtracking algorithm to efficiently find solutions.
-Provides clear and easy-to-understand output.
+✅ Supports 4×4, 9×9, 16×16  
+🧠 Solves puzzles using CSP and Neural Network  
+📊 Leaderboard with avatars  
+🎮 Play directly in your browser
+## 🌐 Project Demo
 
-# How to Use?
-1. Clone this repository to your local machine.
-2. Ensure you have a C++ compiler installed (e.g., g++).
-3. Open a terminal or command prompt and navigate to the directory where you cloned the repository.
-4. Compile the sudoku_solver.cpp file using the C++ compiler
-5. Run the compiled program
-6. Input the Sudoku puzzle as a 9x9 grid, using '0' or '.' to represent empty cells.
-7. The program will solve the puzzle and display the solution.
-
-# How to Run ?
-- # Compiling
-    - Standard: g++ solver.cpp -o solver.exe
-    - Faster: g++ -O3 solver.cpp -o solver.exe
-    - Fastest(not recommended): g++ -Ofast solver.cpp -o solver.exe
-  
-- # Running
-  - Put your sudoku puzzle in puzzle.txt, use numbers to represent given data and 0(Zero) to represent missing data with spaces in between every number.
-  - Also put the size of the sudoku on the first line(look at examples in /puzzles)
-  - Execute ./solver.exe in the terminal while in the root directory of the project.
+[![Watch the video]([https://youtu.be/T23B08-u3Qo](https://youtu.be/LtE_hEUltw4))
 
 
-# How did I achieve this speed ?
-- To achieve this performance Donalds Knuths Algorithm X was used.
-- The data structure used to implement Algo X is Dancing Links also proposed by Donald Knuth.
-- I made a significant improvement in performance building the Toroidal Doubly Linked List to represent the puzzle as an exact cover problem. Time Complexity: O(n^3)
-- And then the standard backtracking algorithm as described by Algorithm X.
 
-## Usage/Examples
+[🎬 Watch PlantDoc.mp4](https://github.com/NehaaTomar/Plant-Disease-Detection-using-deep-learning-models-public-/raw/main/PlantDoc.mp4)
+
+---
+
+## 🚀 Features
+
+| Feature                   | Description |
+|---------------------------|-------------|
+| 🎮 Sudoku Gameplay        | Play 4x4, 9x9, or 16x16 puzzles |
+| 🧩 Puzzle Generator       | Difficulty levels: Easy, Medium, Hard |
+| 🤖 AI Solvers             | CSP (all sizes), Neural Net (9x9 only) |
+| 📝 Real-Time Validation   | Checks correctness as you play |
+| 🏆 Leaderboard            | Stores best scores and avatars |
+| 📤 Avatar Upload          | Upload profile pics for leaderboard |
+| 🧠 NN Model Training      | Train your own neural model using `train.py` |
+| 🗃 SQLite with Alembic    | Database with migrations using Alembic |
+
+---
+
+## 📂 Project Structure
 
 ```
-Here's an example of how to input a Sudoku puzzle:
-Enter the Sudoku puzzle (use '0' or '.' for empty cells):
-5 3 0 | 0 7 0 | 0 0 0
-6 0 0 | 1 9 5 | 0 0 0
-0 9 8 | 0 0 0 | 0 6 0
-------+-------+------
-8 0 0 | 0 6 0 | 0 0 3
-4 0 0 | 8 0 3 | 0 0 1
-7 0 0 | 0 2 0 | 0 0 6
-------+-------+------
-0 6 0 | 0 0 0 | 2 8 0
-0 0 0 | 4 1 9 | 0 0 5
-0 0 0 | 0 8 0 | 0 7 9
-
-- # After solving, the output will be:
-Sudoku puzzle solved:
-
-5 3 4 | 6 7 8 | 9 1 2
-6 7 2 | 1 9 5 | 3 4 8
-1 9 8 | 3 4 2 | 5 6 7
-------+-------+------
-8 5 9 | 7 6 1 | 4 2 3
-4 2 6 | 8 5 3 | 7 9 1
-7 1 3 | 9 2 4 | 8 5 6
-------+-------+------
-9 6 1 | 5 3 7 | 2 8 4
-2 8 7 | 4 1 9 | 6 3 5
-3 4 5 | 2 8 6 | 1 7 9
-
-
+project-sudoku/
+├── ai-sudoku-solver/
+│   ├── app.py                 # Main Flask app
+│   ├── create_db.py           # DB setup script
+│   ├── generator.py           # Puzzle generator logic
+│   ├── predict.py             # Wrapper for NN model prediction
+│   ├── solver_csp.py          # CSP-based solver (any size)
+│   ├── solver_nn.py           # Neural Network-based solver (9x9 only)
+│   ├── train.py               # Model training script
+│   ├── sudoku_model.h5        # Pre-trained Keras model
+│   ├── requirementr           # Requirements file (should rename to `requirements.txt`)
+│   ├── leaderboard.db         # SQLite DB (if used directly)
+│   ├── leaderboard.json       # JSON leaderboard (legacy?)
+│   ├── static/                # CSS, JS, Avatars
+│   ├── templates/             # Jinja templates (index.html etc.)
+│   ├── instance/              # Flask instance folder
+│   ├── migrations/            # Alembic DB migrations
+│   └── app.db                 # Final SQLite database
+├── .vscode/                   # (Optional) VS Code settings
+├── alembic.ini                # Alembic config
+├── Al Sudoku Solver.mp4       # (Optional) Demo video
 ```
 
+---
 
+## 🛠️ Installation
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/NehaaTomar/AI_Sudoku_Solver.git
+cd ai-sudoku-solver
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Requirements
+
+First, rename the `requirementr` file to `requirements.txt`:
+
+```bash
+mv requirementr requirements.txt
+pip install -r requirements.txt
+```
+
+Or manually install essentials:
+
+```bash
+pip install flask flask_sqlalchemy numpy keras tensorflow alembic
+```
+
+### 4. Initialize Database
+
+```bash
+python create_db.py
+flask db init
+flask db migrate -m "initial migration"
+flask db upgrade
+```
+
+### 5. Run the App
+
+```bash
+python app.py
+```
+
+Then open [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+---
+
+## 🧠 API Endpoints
+
+### `GET /generate`
+Returns a new Sudoku puzzle.
+
+**Query Parameters:**
+- `size`: 4, 9, or 16
+- `difficulty`: easy, medium, or hard
+
+---
+
+### `POST /solve`
+Solves a given puzzle.
+
+```json
+{
+  "grid": [[...]],
+  "method": "csp" | "nn"
+}
+```
+
+Returns:
+```json
+{ "solution": [[...]] }
+```
+
+---
+
+### `POST /validate`
+Checks if current grid is valid.
+
+```json
+{ "grid": [[...]] }
+```
+
+Returns:
+```json
+{ "valid": true }
+```
+
+---
+
+### `POST /submit_score`
+Submit score and optional avatar.
+
+- Fields: `name`, `time`, `difficulty`, `grid_size`, `avatar` (file)
+
+---
+
+### `GET /leaderboard`
+Returns leaderboard JSON:
+
+```json
+[
+  {
+    "name": "Bob",
+    "time": 120.5,
+    "difficulty": "medium",
+    "grid_size": "9",
+    "avatar": "/static/avatars/..."
+  },
+  ...
+]
+```
+
+---
+
+## 🧠 AI Solvers
+
+### CSP Solver (`solver_csp.py`)
+- Works with all grid sizes.
+- Uses backtracking with constraint propagation.
+
+### Neural Net Solver (`solver_nn.py`)
+- Works **only for 9×9 puzzles**
+- Requires `sudoku_model.h5`
+- Train your model with `train.py`
+
+---
+
+## 🧪 Training Neural Model
+
+To retrain the model:
+
+```bash
+python backend/train.py
+```
+
+This saves a new `sudoku_model.h5` file which is loaded by `predict.py`.
+
+---
+
+## 🧑‍💻 Contributing
+
+1. Fork the repo  
+2. Create a branch: `git checkout -b feature-xyz`  
+3. Commit and push  
+4. Create a PR  
+
+PRs are welcome!
+
+---
+
+## 🖼️ Screenshots
+![Game](/images/Game.png)
+![Avatar](/images/Avatar.png)
+![sudokusolver](/images/sudokusolver.png)
+![AI](/images/AI.png)
+![theme](/images/theme.png)
+![leaderboard](/images/leaderboard.png)
+
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+[MIT LICENSE](LICENSE)
+---
+
+## 🙋 FAQ
+
+**Q: Why doesn’t the neural net work on 4x4 or 16x16?**  
+A: It's trained only for standard 9x9 Sudoku.
+
+**Q: How are avatars handled?**  
+A: They're stored in `/static/avatars` and linked to player scores.
+
+**Q: What is `leaderboard.json` for?**  
+A: Legacy format—use SQLite database (`app.db` or `leaderboard.db`) for persistence.
+
+---
+
+---
 
