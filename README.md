@@ -6,13 +6,11 @@ This is a full-stack AI-powered Sudoku web application built with **Flask** for 
 🧠 Solves puzzles using CSP and Neural Network  
 📊 Leaderboard with avatars  
 🎮 Play directly in your browser
-## 🌐 Project Demo
+## 🎥 Demo Video: AI Sudoku Solver
 
-[![Watch the video](https://youtu.be/LtE_hEUltw4)
+[![Watch the video](https://img.youtube.com/vi/LtE_hEUltw4/0.jpg)](https://youtu.be/LtE_hEUltw4)
 
-
-
-[🎬 Watch PlantDoc.mp4](https://github.com/NehaaTomar/Plant-Disease-Detection-using-deep-learning-models-public-/raw/main/PlantDoc.mp4)
+Click the image above or [watch on YouTube](https://youtu.be/LtE_hEUltw4) to see the AI Sudoku Solver in action.
 
 ---
 
