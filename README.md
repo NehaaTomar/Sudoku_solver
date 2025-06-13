@@ -224,7 +224,7 @@ PRs are welcome!
 ## 📜 License
 
 This project is licensed under the MIT License.
-[MIT LICENSE](LICENSE)
+[MIT LICENSE](LICENSE.txt)
 ---
 
 ## 🙋 FAQ
