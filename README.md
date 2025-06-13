@@ -8,7 +8,7 @@ This is a full-stack AI-powered Sudoku web application built with **Flask** for 
 🎮 Play directly in your browser
 ## 🌐 Project Demo
 
-[![Watch the video]([https://youtu.be/T23B08-u3Qo](https://youtu.be/LtE_hEUltw4))
+[![Watch the video](https://youtu.be/LtE_hEUltw4)
 
 
 
